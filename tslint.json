@@ -1,0 +1,20 @@
+{
+    "rulesDirectory": [
+        "tslint-plugin-prettier"
+    ],
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-prettier"
+    ],
+    "rules": {
+        "prettier": [
+            true,
+            {
+                "singleQuote": false,
+                "semi": true,
+                "tabWidth": 4,
+                "trailingComma": "es5"
+            }
+        ]
+    }
+}
