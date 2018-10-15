@@ -5,8 +5,11 @@ import { auth } from "./firebase";
  * @param email string
  * @param password string
  */
-export const signUpWithEamilAndPassword = (email: string, password: string) => {
-    auth.createUserWithEmailAndPassword(email, password);
+export const signUpWithEamilAndPassword = (
+    email: string,
+    password: string
+): Promise<firebase.auth.UserCredential> => {
+    return auth.createUserWithEmailAndPassword(email, password);
 };
 
 /**

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import * as routes from "../../constants/routes";
-import { auth } from "../../firebase/firebase";
+import * as auth from "../../firebase/auth";
 
 interface ISignUpFormState {
     username: string;
@@ -28,6 +28,21 @@ class SignUpForm extends React.Component<{}, ISignUpFormState> {
     }
 
     public onSubmit = (event: any) => {
+        const states: ISignUpFormState = this.state;
+        auth.signUpWithEamilAndPassword(states.email, states.passwordOne)
+            .then(authUser => {
+                this.setState({
+                    username: "",
+                    email: "",
+                    passwordOne: "",
+                    passwordTwo: "",
+                    error: null,
+                });
+            })
+            .catch(error => {
+                this.setState({ error });
+            });
+
         event.preventDefault();
     };
 
