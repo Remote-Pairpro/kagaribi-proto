@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import * as routes from "../../constants/routes";
 import * as auth from "../../firebase/auth";
 
+interface ISignUpFormProps {
+    history: any;
+}
 interface ISignUpFormState {
     username: string;
     email: string;
@@ -11,33 +14,41 @@ interface ISignUpFormState {
     error: any;
 }
 
-// const byPropKey = (propertyName: string, value: any) => ({
-//     [propertyName]: value,
-// });
+const INITIAL_STATE: {
+    username: string;
+    email: string;
+    passwordOne: string;
+    passwordTwo: string;
+    error: any;
+} = {
+    username: "",
+    email: "",
+    passwordOne: "",
+    passwordTwo: "",
+    error: null,
+};
 
-class SignUpForm extends React.Component<{}, ISignUpFormState> {
-    constructor({}) {
-        super({});
-        this.state = {
-            username: "",
-            email: "",
-            passwordOne: "",
-            passwordTwo: "",
-            error: null,
-        };
+class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
+    constructor(signUpFormProps: ISignUpFormProps) {
+        super(signUpFormProps);
+        this.state = { ...INITIAL_STATE };
     }
 
     public onSubmit = (event: any) => {
-        const states: ISignUpFormState = this.state;
-        auth.signUpWithEamilAndPassword(states.email, states.passwordOne)
+        const signUpFormState: ISignUpFormState = this.state;
+        const signUpFormProps: ISignUpFormProps = this.props;
+
+        console.log(event);
+        console.log(signUpFormState);
+        console.log(signUpFormProps);
+
+        auth.signUpWithEamilAndPassword(
+            signUpFormState.email,
+            signUpFormState.passwordOne
+        )
             .then(authUser => {
-                this.setState({
-                    username: "",
-                    email: "",
-                    passwordOne: "",
-                    passwordTwo: "",
-                    error: null,
-                });
+                this.setState({ ...INITIAL_STATE });
+                signUpFormProps.history.push(routes.HOME);
             })
             .catch(error => {
                 this.setState({ error });
@@ -105,14 +116,14 @@ const SignUpLink = () => {
     );
 };
 
-const SignUpPage = () => {
+const SignUpPage = (signUpFormProps: ISignUpFormProps) => {
     return (
         <div>
             <h1>SignUp</h1>
-            <SignUpForm />
+            <SignUpForm history={signUpFormProps.history} />
         </div>
     );
 };
 
-export default SignUpPage;
+export default withRouter(SignUpPage);
 export { SignUpForm, SignUpLink };
