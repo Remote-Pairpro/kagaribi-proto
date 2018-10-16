@@ -73,6 +73,7 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
                     }
                     type="text"
                     placeholder="Full Name"
+                    autoComplete="on"
                 />
                 <input
                     value={states.email}
@@ -81,6 +82,7 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
                     }
                     type="text"
                     placeholder="Email Address"
+                    autoComplete="on"
                 />
                 <input
                     value={states.passwordOne}
@@ -89,6 +91,7 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
                     }
                     type="password"
                     placeholder="Password"
+                    autoComplete="on"
                 />
                 <input
                     value={states.passwordTwo}
@@ -97,6 +100,7 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
                     }
                     type="password"
                     placeholder="Confirm Password"
+                    autoComplete="on"
                 />
                 <button type="submit" disabled={isInvalid}>
                     Sign Up
