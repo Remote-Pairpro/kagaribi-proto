@@ -17,8 +17,11 @@ export const signUpWithEamilAndPassword = (
  * @param email string
  * @param password string
  */
-export const signInWithEmailAndPassword = (email: string, password: string) => {
-    auth.signInWithEmailAndPassword(email, password);
+export const signInWithEmailAndPassword = (
+    email: string,
+    password: string
+): Promise<firebase.auth.UserCredential> => {
+    return auth.signInWithEmailAndPassword(email, password);
 };
 
 /**

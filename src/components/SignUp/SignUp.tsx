@@ -14,13 +14,7 @@ interface ISignUpFormState {
     error: any;
 }
 
-const INITIAL_STATE: {
-    username: string;
-    email: string;
-    passwordOne: string;
-    passwordTwo: string;
-    error: any;
-} = {
+const INITIAL_STATE: ISignUpFormState = {
     username: "",
     email: "",
     passwordOne: "",
@@ -34,13 +28,9 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
         this.state = { ...INITIAL_STATE };
     }
 
-    public onSubmit = (event: any) => {
+    public onSubmit = (event: any): void => {
         const signUpFormState: ISignUpFormState = this.state;
         const signUpFormProps: ISignUpFormProps = this.props;
-
-        console.log(event);
-        console.log(signUpFormState);
-        console.log(signUpFormProps);
 
         auth.signUpWithEamilAndPassword(
             signUpFormState.email,
