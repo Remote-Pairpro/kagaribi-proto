@@ -13,8 +13,8 @@ interface IRootState {
 }
 
 export class Root extends React.Component<{}, IRootState> {
-    constructor({}) {
-        super({});
+    constructor(defaultProp: any) {
+        super(defaultProp);
         this.state = { authUser: null };
     }
 
