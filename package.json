@@ -5,7 +5,7 @@
   "author": "Hidari",
   "license": "MIT",
   "scripts": {
-    "tslint:fix": "tslint src/**/*.* --fix",
+    "tslint:fix": "tslint 'src/**/*.ts?(x)' --fix",
     "build:dev": "webpack",
     "start:dev": "webpack-dev-server",
     "storybook": "start-storybook -p 9001 -c .storybook"
