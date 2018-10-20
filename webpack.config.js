@@ -3,7 +3,7 @@ module.exports = {
     entry: "./src/index.tsx",
     output: {
         filename: "bundle.js",
-        path: __dirname + "/public/dist"
+        path: __dirname + "/public"
     },
     devtool: "source-map",
     resolve: {
