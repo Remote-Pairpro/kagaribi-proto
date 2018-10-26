@@ -15,5 +15,5 @@ node_modules/
 # Firebase
 .firebase
 
-# keys
-.secrets
+# direnv
+.envrc

@@ -1,10 +1,12 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-import { firebaseConfig } from "../.secrets/firebase.config";
+
+const firebaseApiKey = process.env.FIREBASE_API_KEY;
+const firebaseAuthDomain = process.env.FIREBASE_AUTH_DOMAIN;
 
 const config = {
-    apiKey: firebaseConfig.apiKey,
-    authDomain: firebaseConfig.authDomain,
+    apiKey: firebaseApiKey,
+    authDomain: firebaseAuthDomain,
 };
 
 if (!firebase.apps.length) {

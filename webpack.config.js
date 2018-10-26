@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+
 module.exports = {
     mode: "development",
     entry: "./src/index.tsx",
@@ -5,6 +7,14 @@ module.exports = {
         filename: "bundle.js",
         path: __dirname + "/public"
     },
+    plugins: [
+        new webpack.DefinePlugin({
+            "process.env": {
+                "FIREBASE_API_KEY": JSON.stringify(process.env.FIREBASE_API_KEY),
+                "FIREBASE_AUTH_DOMAIN": JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
+            }
+        }),
+    ],
     devtool: "source-map",
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"]
