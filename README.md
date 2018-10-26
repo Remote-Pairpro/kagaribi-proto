@@ -11,7 +11,7 @@ and define env below.
 
 ```sh
 export FIREBASE_API_KEY=<YOUR_API_KEY>
-export FIREBASE_AUTH_DOMAIN= <YOUR_AUTH_DOMAIN>
+export FIREBASE_AUTH_DOMAIN=<YOUR_AUTH_DOMAIN>
 ```
 
 ## Firebase Hosting
