@@ -26,7 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run:
+        name: Install dependencies
+        command: yarn install
 
       - save_cache:
           paths:
@@ -35,3 +37,7 @@ jobs:
         
       # run tests!
       # - run: yarn test
+
+      - run:
+        name: Deploy master to firebase
+        command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
