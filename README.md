@@ -1,4 +1,5 @@
 # kagaribi-proto
+[![CircleCI](https://circleci.com/gh/Remote-Pairpro/kagaribi-proto.svg?style=svg)](https://circleci.com/gh/Remote-Pairpro/kagaribi-proto)
 
 ## How to start
 ```sh
