@@ -19,6 +19,6 @@ If you want to run for firebase hosting...
 ```sh
 yarn run build:dev
 firebase serve
-#or
+# or
 firebase deploy
 ```
