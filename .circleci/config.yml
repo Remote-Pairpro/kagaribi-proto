@@ -27,8 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run:
-        name: Install dependencies
-        command: yarn install
+          name: Install dependencies
+          command: yarn install
 
       - save_cache:
           paths:
@@ -39,5 +39,5 @@ jobs:
       # - run: yarn test
 
       - run:
-        name: Deploy master to firebase
-        command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+          name: Deploy master to firebase
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
