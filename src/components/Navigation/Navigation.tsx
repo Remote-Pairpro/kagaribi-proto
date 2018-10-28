@@ -36,6 +36,12 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
     <ul>
         <li>
+            <Link to={routes.HOME}>Home</Link>
+        </li>
+        <li>
+            <Link to={routes.ABOUT}>About</Link>
+        </li>
+        <li>
             <Link to={routes.SIGN_IN}>Sign In</Link>
         </li>
     </ul>
