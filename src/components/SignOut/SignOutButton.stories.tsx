@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
-import SignoutButton from "./SignoutButton";
+import SignOutButton from "./SignOutButton";
 
-storiesOf("Signout", module).add("default", () => {
-    return <SignoutButton />;
+storiesOf("SignOut", module).add("default", () => {
+    return <SignOutButton />;
 });
