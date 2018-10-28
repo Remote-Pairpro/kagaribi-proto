@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import * as routes from "../../constants/routes";
-import SignOutButton from "../SignOut/SignOutButton";
+import SignoutButton from "../Signout/SignoutButton";
 
 interface INavigationProp {
     authUser: firebase.User;
@@ -28,7 +28,7 @@ const NavigationAuth = () => (
             <Link to={routes.ABOUT}>About</Link>
         </li>
         <li>
-            <SignOutButton />
+            <SignoutButton />
         </li>
     </ul>
 );
