@@ -4,6 +4,7 @@ import * as routes from "../../constants/routes";
 import { auth } from "../../firebase/firebase";
 import About from "../About/About";
 import Home from "../Home/Home";
+import MyPage from "../MyPage/MyPage";
 import Navigation from "../Navigation/Navigation";
 import SignInPage from "../SignIn/SignIn";
 import SignUpPage from "../SignUp/SignUp";
@@ -37,6 +38,10 @@ export class Root extends React.Component<{}, IRootState> {
                     <Route path={routes.ABOUT} component={About} />
                     <Route path={routes.SIGN_UP} component={SignUpPage} />
                     <Route path={routes.SIGN_IN} component={SignInPage} />
+                    <Route
+                        path={routes.MY_PAGE}
+                        render={() => <MyPage authUser={this.state.authUser} />}
+                    />
                 </div>
             </BrowserRouter>
         );
