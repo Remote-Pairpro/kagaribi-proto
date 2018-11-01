@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import { MemoryRouter } from "react-router";
-import { auth } from "../../firebase/firebase";
+import { firebaseUserDummy } from "../../test-helpers/firebase-stub";
 import Navigation from "./Navigation";
 
 storiesOf("Navigation", module)
@@ -9,7 +9,7 @@ storiesOf("Navigation", module)
         <MemoryRouter initialEntries={["/", "/about"]}>{story()}</MemoryRouter>
     ))
     .add("Auth", () => {
-        return <Navigation authUser={auth.currentUser} />;
+        return <Navigation authUser={firebaseUserDummy} />;
     });
 
 storiesOf("Navigation", module)
