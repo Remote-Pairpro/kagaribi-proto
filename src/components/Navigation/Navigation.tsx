@@ -13,8 +13,8 @@ class Navigation extends React.Component<INavigationProp> {
     }
 
     public render() {
-        const prop = this.props.authUser;
-        return prop ? <NavigationAuth /> : <NavigationNonAuth />;
+        const user = this.props.authUser;
+        return user ? <NavigationAuth /> : <NavigationNonAuth />;
     }
 }
 
