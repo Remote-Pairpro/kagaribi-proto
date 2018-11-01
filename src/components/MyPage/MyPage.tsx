@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router";
+import { Redirect } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
 interface IMyPageProps {
