@@ -27,10 +27,10 @@ const firebaseUserDummy: firebase.User = {
     updatePhoneNumber: null,
     updateProfile: null,
     displayName: null,
-    email: null,
+    email: "example@example.com",
     photoURL: null,
     providerId: null,
-    uid: null,
+    uid: "this_is_example",
 };
 
 export { firebaseUserDummy };
