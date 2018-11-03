@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import React from "react";
 import * as routes from "../../constants/routes";
 import * as auth from "../../firebase/auth";
-import { SignUpLink } from "../SignUp/SignUp";
 
 interface ISignInFormState {
     email: string;
@@ -74,15 +72,5 @@ class SignInFrom extends React.Component<ISignInFormProps, ISignInFormState> {
     }
 }
 
-const SignInPage = (signInFormProps: ISignInFormProps) => {
-    return (
-        <div>
-            <h1>SignIn</h1>
-            <SignInFrom history={signInFormProps.history} />
-            <SignUpLink />
-        </div>
-    );
-};
-
-export default withRouter(SignInPage);
-export { SignInFrom };
+export default SignInFrom;
+export { ISignInFormProps };

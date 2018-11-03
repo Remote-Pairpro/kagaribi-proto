@@ -6,7 +6,7 @@ import About from "../About/About";
 import Home from "../Home/Home";
 import MyPage from "../MyPage/MyPage";
 import Navigation from "../Navigation/Navigation";
-import SignInPage from "../SignIn/SignIn";
+import SignInPage from "../SignIn/SignInPage";
 import SignUpPage from "../SignUp/SignUp";
 
 interface IRootState {
