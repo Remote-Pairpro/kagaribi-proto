@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import React from "react";
 import * as routes from "../../constants/routes";
 import * as auth from "../../firebase/auth";
 
@@ -101,23 +100,5 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
     }
 }
 
-const SignUpLink = () => {
-    return (
-        <p>
-            アカウントをお持ちでないですか？{" "}
-            <Link to={routes.SIGN_UP}>Sign Up</Link>
-        </p>
-    );
-};
-
-const SignUpPage = (signUpFormProps: ISignUpFormProps) => {
-    return (
-        <div>
-            <h1>SignUp</h1>
-            <SignUpForm history={signUpFormProps.history} />
-        </div>
-    );
-};
-
-export default withRouter(SignUpPage);
-export { SignUpForm, SignUpLink };
+export default SignUpForm;
+export { ISignUpFormProps };

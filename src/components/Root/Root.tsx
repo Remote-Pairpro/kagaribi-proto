@@ -7,7 +7,7 @@ import Home from "../Home/Home";
 import MyPage from "../MyPage/MyPage";
 import Navigation from "../Navigation/Navigation";
 import SignInPage from "../SignIn/SignInPage";
-import SignUpPage from "../SignUp/SignUp";
+import SignUpPage from "../SignUp/SignUpPage";
 
 interface IRootState {
     authUser: firebase.User;

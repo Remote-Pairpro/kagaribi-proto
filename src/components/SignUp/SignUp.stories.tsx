@@ -1,7 +1,8 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import { MemoryRouter } from "react-router";
-import { SignUpForm, SignUpLink } from "./SignUp";
+import SignUpForm from "./SignUpForm";
+import SignUpLink from "./SignUpLink";
 
 storiesOf("SignUp", module).add("SignUpForm", () => {
     return <SignUpForm history={null} />;

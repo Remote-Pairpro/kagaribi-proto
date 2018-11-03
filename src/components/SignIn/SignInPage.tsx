@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { SignUpLink } from "../SignUp/SignUp";
+import SignUpLink from "../SignUp/SignUpLink";
 import SignInForm, { ISignInFormProps } from "./SignInForm";
 
 const SignInPage = (signInFormProps: ISignInFormProps) => {
