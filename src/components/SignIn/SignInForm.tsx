@@ -1,3 +1,5 @@
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 import React from "react";
 import * as routes from "../../constants/routes";
 import * as auth from "../../firebase/auth";
@@ -45,7 +47,9 @@ class SignInFrom extends React.Component<ISignInFormProps, ISignInFormState> {
             states.email === "" || states.password === "";
         return (
             <form onSubmit={this.onSubmit}>
-                <input
+                <TextField
+                    id="email-address"
+                    label="Email"
                     type="text"
                     placeholder="Email Address"
                     value={states.email}
@@ -54,7 +58,10 @@ class SignInFrom extends React.Component<ISignInFormProps, ISignInFormState> {
                     }
                     autoComplete="on"
                 />
-                <input
+                {"  "}
+                <TextField
+                    id="password"
+                    label="Password"
                     type="password"
                     placeholder="Passwprd"
                     value={states.password}
@@ -63,9 +70,9 @@ class SignInFrom extends React.Component<ISignInFormProps, ISignInFormState> {
                     }
                     autoComplete="on"
                 />
-                <button type="submit" disabled={isInvalid}>
+                <Button type="submit" disabled={isInvalid} variant="outlined">
                     Sign In
-                </button>
+                </Button>
                 {states.error && <p>{states.error.message}</p>}
             </form>
         );
