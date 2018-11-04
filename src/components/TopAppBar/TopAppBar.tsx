@@ -3,9 +3,9 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import AccountCircle from "@material-ui/icons/AccountCircle";
 import MenuIcon from "@material-ui/icons/Menu";
 import React from "react";
+import TopAppBarAccountButton from "./TopAppBarAccountButton";
 
 interface ITopAppBarProps {
     authUser: firebase.User;
@@ -18,6 +18,7 @@ class TopAppBar extends React.Component<ITopAppBarProps> {
 
     public render() {
         const user = this.props.authUser;
+
         return (
             <AppBar position="static">
                 <Toolbar>
@@ -28,11 +29,11 @@ class TopAppBar extends React.Component<ITopAppBarProps> {
                         Kagaribi-proto
                     </Typography>
                     {user ? (
-                        <IconButton color="inherit">
-                            <AccountCircle />
-                        </IconButton>
+                        <TopAppBarAccountButton />
                     ) : (
-                        <Button color="inherit">Login</Button>
+                        <div>
+                            <Button color="inherit">Sign In</Button>
+                        </div>
                     )}
                 </Toolbar>
             </AppBar>
