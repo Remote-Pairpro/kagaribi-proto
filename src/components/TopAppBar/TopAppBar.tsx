@@ -25,7 +25,7 @@ class TopAppBar extends React.Component<ITopAppBarProps> {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" color="inherit">
-                        Kagaribi
+                        Kagaribi-proto
                     </Typography>
                     {user ? (
                         <IconButton color="inherit">
