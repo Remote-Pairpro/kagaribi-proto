@@ -8,6 +8,7 @@ import MyPage from "../MyPage/MyPage";
 import Navigation from "../Navigation/Navigation";
 import SignInPage from "../SignIn/SignInPage";
 import SignUpPage from "../SignUp/SignUpPage";
+import TopAppBar from "../TopAppBar/TopAppBar";
 
 interface IRootState {
     authUser: firebase.User;
@@ -31,6 +32,7 @@ export class Root extends React.Component<{}, IRootState> {
         return (
             <BrowserRouter>
                 <div>
+                    <TopAppBar authUser={this.state.authUser} />
                     <Navigation authUser={this.state.authUser} />
                     <hr />
 
