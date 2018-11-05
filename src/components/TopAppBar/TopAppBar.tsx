@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
 import React from "react";
 import TopAppBarAccountButton from "./TopAppBarAccountButton";
+import TopAppBarSignInButton from "./TopAppBarSignInButton";
 
 interface ITopAppBarProps {
     authUser: firebase.User;
@@ -31,9 +32,7 @@ class TopAppBar extends React.Component<ITopAppBarProps> {
                     {user ? (
                         <TopAppBarAccountButton />
                     ) : (
-                        <div>
-                            <Button color="inherit">Sign In</Button>
-                        </div>
+                        <TopAppBarSignInButton />
                     )}
                 </Toolbar>
             </AppBar>

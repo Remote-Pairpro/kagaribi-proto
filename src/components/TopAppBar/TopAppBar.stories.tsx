@@ -6,6 +6,9 @@ import { firebaseUserDummy } from "../../test-helpers/firebase-stub";
 import TopAppBar from "./TopAppBar";
 
 storiesOf("TopAppBar", module)
+    .addDecorator(story => (
+        <MemoryRouter initialEntries={[routes.SIGN_IN]}>{story()}</MemoryRouter>
+    ))
     .add("Non Auth", () => {
         return <TopAppBar authUser={null} />;
     })
