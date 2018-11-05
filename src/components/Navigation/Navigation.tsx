@@ -29,9 +29,6 @@ const NavigationAuth = () => (
         <li>
             <Link to={routes.MY_PAGE}>My Page</Link>
         </li>
-        <li>
-            <SignOutButton />
-        </li>
     </ul>
 );
 

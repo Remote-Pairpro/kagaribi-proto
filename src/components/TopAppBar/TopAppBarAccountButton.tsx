@@ -3,6 +3,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import React from "react";
+import { Link } from "react-router-dom";
+import * as routes from "../../constants/routes";
+import * as auth from "../../firebase/auth";
 
 interface ITopAppBarAccountButtonState {
     anchorEl: any;
@@ -19,13 +22,17 @@ class TopAppBarAccountButton extends React.Component<
         };
     }
 
-    public handleMenu = (event: any) => {
+    public openMenu = (event: any) => {
         this.setState({ anchorEl: event.currentTarget });
-        event.preventDefault();
     };
 
-    public handleClose = () => {
+    public closeMenu = () => {
         this.setState({ anchorEl: null });
+    };
+
+    public closeAndSignOut = () => {
+        this.closeMenu();
+        auth.signOut();
     };
 
     public render() {
@@ -36,7 +43,7 @@ class TopAppBarAccountButton extends React.Component<
             <div>
                 <IconButton
                     color="inherit"
-                    onClick={this.handleMenu}
+                    onClick={this.openMenu}
                     aria-owns={open ? "menu-appbar" : undefined}
                     aria-haspopup="true"
                 >
@@ -54,10 +61,17 @@ class TopAppBarAccountButton extends React.Component<
                         horizontal: "right",
                     }}
                     open={open}
-                    onClose={this.handleClose}
+                    onClose={this.closeMenu}
                 >
-                    <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Sign Out</MenuItem>
+                    {/* See https://stackoverflow.com/questions/47873566/how-navigate-using-the-menuitem-material-ui-v1#comment88227691_47875510 */}
+                    <MenuItem
+                        component={Link}
+                        {...{ to: routes.MY_PAGE }}
+                        onClick={this.closeMenu}
+                    >
+                        My Page
+                    </MenuItem>
+                    <MenuItem onClick={this.closeAndSignOut}>Sign Out</MenuItem>
                 </Menu>
             </div>
         );
