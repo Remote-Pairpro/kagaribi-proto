@@ -11,14 +11,6 @@ storiesOf("Navigation", module)
             {story()}
         </MemoryRouter>
     ))
-    .add("Auth", () => {
-        return <Navigation authUser={firebaseUserDummy} />;
-    });
-
-storiesOf("Navigation", module)
-    .addDecorator(story => (
-        <MemoryRouter initialEntries={[routes.SIGN_IN]}>{story()}</MemoryRouter>
-    ))
-    .add("No Auth", () => {
-        return <Navigation authUser={null} />;
+    .add("default", () => {
+        return <Navigation />;
     });
