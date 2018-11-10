@@ -5,8 +5,10 @@
   "author": "Hidari",
   "license": "MIT",
   "scripts": {
+    "tslint:run": "tslint 'src/**/*.ts?(x)'",
     "tslint:fix": "tslint 'src/**/*.ts?(x)' --fix",
     "build:dev": "webpack",
+    "build:prod": "webpack --mode production",
     "start:dev": "webpack-dev-server --open",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
