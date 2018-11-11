@@ -1,13 +1,8 @@
-import { Drawer, ListItemIcon, ListItemText } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
-import SubjectIcon from "@material-ui/icons/Subject";
 import React from "react";
 import { Link } from "react-router-dom";
 import * as routes from "../../constants/routes";
