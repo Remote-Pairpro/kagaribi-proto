@@ -33,8 +33,6 @@ export class Root extends React.Component<{}, IRootState> {
             <BrowserRouter>
                 <div>
                     <TopAppBar authUser={this.state.authUser} />
-                    <Navigation />
-                    <hr />
 
                     <Route exact path={routes.HOME} component={Home} />
                     <Route path={routes.ABOUT} component={About} />
