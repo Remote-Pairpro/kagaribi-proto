@@ -53,11 +53,13 @@ class TopAppBar extends React.Component<ITopAppBarProps, ITopAppBarState> {
                     >
                         Kagaribi-proto
                     </Typography>
-                    {user ? (
-                        <TopAppBarAccountButton />
-                    ) : (
-                        <TopAppBarSignInButton />
-                    )}
+                    <div style={{ marginLeft: "auto", marginRight: "0" }}>
+                        {user ? (
+                            <TopAppBarAccountButton />
+                        ) : (
+                            <TopAppBarSignInButton />
+                        )}
+                    </div>
                 </Toolbar>
             </AppBar>
         );
