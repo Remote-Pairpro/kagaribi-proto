@@ -9,7 +9,7 @@ import { Redirect } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
 interface IMyPageProps {
-    authUser: firebase.User;
+    authUser: firebase.User | null;
 }
 class MyPage extends React.Component<IMyPageProps> {
     constructor(myPageProps: IMyPageProps) {
@@ -23,11 +23,11 @@ class MyPage extends React.Component<IMyPageProps> {
                 <List>
                     <ListItem>
                         <EmailIcon />
-                        <ListItemText>{this.props.authUser.email}</ListItemText>
+                        <ListItemText>{user.email}</ListItemText>
                     </ListItem>
                     <ListItem>
                         <PermIdentityIcon />
-                        <ListItemText> {this.props.authUser.uid}</ListItemText>
+                        <ListItemText> {user.uid}</ListItemText>
                     </ListItem>
                 </List>
             </div>

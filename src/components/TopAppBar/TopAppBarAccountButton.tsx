@@ -11,6 +11,8 @@ interface ITopAppBarAccountButtonState {
     anchorEl: any;
 }
 
+const LinkToMyPage = (prop: any) => <Link to={routes.MY_PAGE} {...prop} />;
+
 class TopAppBarAccountButton extends React.Component<
     {},
     ITopAppBarAccountButtonState
@@ -64,11 +66,7 @@ class TopAppBarAccountButton extends React.Component<
                     onClose={this.closeMenu}
                 >
                     {/* See https://stackoverflow.com/questions/47873566/how-navigate-using-the-menuitem-material-ui-v1#comment88227691_47875510 */}
-                    <MenuItem
-                        component={Link}
-                        {...{ to: routes.MY_PAGE }}
-                        onClick={this.closeMenu}
-                    >
+                    <MenuItem component={LinkToMyPage} onClick={this.closeMenu}>
                         My Page
                     </MenuItem>
                     <MenuItem onClick={this.closeAndSignOut}>Sign Out</MenuItem>

@@ -10,7 +10,7 @@ import SignUpPage from "../SignUp/SignUpPage";
 import TopAppBar from "../TopAppBar/TopAppBar";
 
 interface IRootState {
-    authUser: firebase.User;
+    authUser: firebase.User | null;
 }
 
 export class Root extends React.Component<{}, IRootState> {

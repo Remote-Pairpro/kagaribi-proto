@@ -11,7 +11,7 @@ import TopAppBarDrower from "./TopAppBarDrower";
 import TopAppBarSignInButton from "./TopAppBarSignInButton";
 
 interface ITopAppBarProps {
-    authUser: firebase.User;
+    authUser: firebase.User | null;
 }
 
 interface ITopAppBarState {
