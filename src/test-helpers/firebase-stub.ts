@@ -1,4 +1,4 @@
-const firebaseMetadataDummy: firebase.auth.UserMetadata = {
+const firebaseUserMetadataDummy: firebase.auth.UserMetadata = {
     creationTime: "dummy",
     lastSignInTime: "dummy",
 };
@@ -14,7 +14,7 @@ const firebaseUserDummy: firebase.User = {
     linkWithPhoneNumber: () => new Promise(() => "dummy"),
     linkWithPopup: () => new Promise(() => "dummy"),
     linkWithRedirect: () => new Promise(() => "dummy"),
-    metadata: firebaseMetadataDummy,
+    metadata: firebaseUserMetadataDummy,
     phoneNumber: "dummy",
     providerData: [],
     reauthenticateAndRetrieveDataWithCredential: () => new Promise(() => "dummy"),
