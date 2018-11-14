@@ -17,7 +17,8 @@ const firebaseUserDummy: firebase.User = {
     metadata: firebaseUserMetadataDummy,
     phoneNumber: "dummy",
     providerData: [],
-    reauthenticateAndRetrieveDataWithCredential: () => new Promise(() => "dummy"),
+    reauthenticateAndRetrieveDataWithCredential: () =>
+        new Promise(() => "dummy"),
     reauthenticateWithCredential: () => new Promise(() => "dummy"),
     reauthenticateWithPhoneNumber: () => new Promise(() => "dummy"),
     reauthenticateWithPopup: () => new Promise(() => "dummy"),
