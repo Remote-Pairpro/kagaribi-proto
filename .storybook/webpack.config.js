@@ -13,10 +13,12 @@ module.exports = (baseConfig, env, defaultConfig) => {
     defaultConfig.plugins.push(
         new webpack.DefinePlugin({
             "process.env": {
-                "FIREBASE_API_KEY": JSON.stringify(process.env.FIREBASE_API_KEY),
-                "FIREBASE_AUTH_DOMAIN": JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
+                FIREBASE_API_KEY: JSON.stringify(process.env.FIREBASE_API_KEY),
+                FIREBASE_AUTH_DOMAIN: JSON.stringify(
+                    process.env.FIREBASE_AUTH_DOMAIN
+                )
             }
-        }),
+        })
     );
     return defaultConfig;
 };
