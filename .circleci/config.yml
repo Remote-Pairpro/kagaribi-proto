@@ -43,8 +43,9 @@ jobs:
           name: Build
           command: yarn run build:prod
 
-      # run tests!
-      # - run: yarn test
+      - run:
+          name: Test
+          command: yarn test
 
       - run:
           name: Deploy master to firebase
