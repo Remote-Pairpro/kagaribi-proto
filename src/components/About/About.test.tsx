@@ -3,8 +3,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 import About from "./About";
 
-describe("About", () => {
-    it("About test", () => {
+describe("About Test", () => {
+    it("example", () => {
         const wrapper = shallow(<About />);
         expect(wrapper.find(".hoge").length).toBe(0);
     });
@@ -17,7 +17,7 @@ describe("About", () => {
         );
     });
 
-    it("renders About correctly", () => {
+    it("rendered correctly", () => {
         const tree = renderer.create(<About />).toJSON();
         expect(tree).toMatchSnapshot();
     });
