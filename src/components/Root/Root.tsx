@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import * as routes from "../../constants/routes";
 import { auth } from "../../firebase/firebase";
 import About from "../About/About";
@@ -33,14 +33,18 @@ export class Root extends React.Component<{}, IRootState> {
                 <div>
                     <TopAppBar authUser={this.state.authUser} />
 
-                    <Route exact path={routes.HOME} component={Home} />
-                    <Route path={routes.ABOUT} component={About} />
-                    <Route path={routes.SIGN_UP} component={SignUpPage} />
-                    <Route path={routes.SIGN_IN} component={SignInPage} />
-                    <Route
-                        path={routes.MY_PAGE}
-                        render={() => <MyPage authUser={this.state.authUser} />}
-                    />
+                    <Switch>
+                        <Route exact path={routes.HOME} component={Home} />
+                        <Route path={routes.ABOUT} component={About} />
+                        <Route path={routes.SIGN_UP} component={SignUpPage} />
+                        <Route path={routes.SIGN_IN} component={SignInPage} />
+                        <Route
+                            path={routes.MY_PAGE}
+                            render={() => (
+                                <MyPage authUser={this.state.authUser} />
+                            )}
+                        />
+                    </Switch>
                 </div>
             </BrowserRouter>
         );

@@ -4,7 +4,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import EmailIcon from "@material-ui/icons/Email";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Switch } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
 interface IMyPageProps {
@@ -19,6 +19,7 @@ class MyPage extends React.Component<IMyPageProps> {
         const user = this.props.authUser;
         return user ? (
             <div>
+                <h1>MyPage</h1>
                 <List>
                     <ListItem>
                         <EmailIcon />
@@ -31,7 +32,9 @@ class MyPage extends React.Component<IMyPageProps> {
                 </List>
             </div>
         ) : (
-            <Redirect to={routes.HOME} />
+            <Switch>
+                <Redirect from={routes.MY_PAGE} to={routes.HOME} />
+            </Switch>
         );
     }
 }
