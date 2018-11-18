@@ -8,34 +8,31 @@ import * as routes from "../../constants/routes";
 import { firebaseUserDummy } from "../../test-helpers/firebase-stub";
 import MyPage from "./MyPage";
 
-describe("MyPage Test", () => {
+describe("<MyPage authUser={user} />", () => {
     let user: firebase.User;
     beforeEach(() => {
         user = firebaseUserDummy;
     });
 
-    it("static contents test", () => {
+    it("should have text 'Mypage'", () => {
         const wrapper = render(<MyPage authUser={user} />);
         expect(wrapper.text()).toContain("MyPage");
     });
 
-    it("test child component", () => {
+    it("should have icons", () => {
         const wrapper = shallow(<MyPage authUser={user} />);
         expect(wrapper.find(EmailIcon).length).toBe(1);
         expect(wrapper.find(PermIdentityIcon).length).toBe(1);
     });
-});
 
-describe("MyPage Snapshots Test", () => {
-    let user: firebase.User;
-    beforeEach(() => {
-        user = firebaseUserDummy;
-    });
-    it("renders MyPage with auth correctly", () => {
+    it("should renders correctly", () => {
         const tree = renderer.create(<MyPage authUser={user} />).toJSON();
         expect(tree).toMatchSnapshot();
     });
-    it("renders MyPage with no auth correctly", () => {
+});
+
+describe("<MyPage authUser={null} />", () => {
+    it("should renders correctly", () => {
         const tree = renderer
             .create(
                 <MemoryRouter initialEntries={[routes.HOME]}>

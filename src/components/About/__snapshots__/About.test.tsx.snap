@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About Test rendered correctly 1`] = `
+exports[`<About /> should renders correctly 1`] = `
 <div>
   <h1>
     About

@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyPage Snapshots Test renders MyPage with auth correctly 1`] = `
+exports[`<MyPage authUser={null} /> should renders correctly 1`] = `null`;
+
+exports[`<MyPage authUser={user} /> should renders correctly 1`] = `
 <div>
   <h1>
     MyPage
@@ -70,5 +72,3 @@ exports[`MyPage Snapshots Test renders MyPage with auth correctly 1`] = `
   </ul>
 </div>
 `;
-
-exports[`MyPage Snapshots Test renders MyPage with no auth correctly 1`] = `null`;
