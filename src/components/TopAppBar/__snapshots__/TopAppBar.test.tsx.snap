@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopAppBar /> should be rendered correctly 1`] = `
+<WithStyles(AppBar)
+  position="static"
+>
+  <WithStyles(Toolbar)>
+    <WithStyles(IconButton)
+      color="inherit"
+      onClick={[Function]}
+    >
+      <pure(MenuIcon) />
+    </WithStyles(IconButton)>
+    <TopAppBarDrower
+      isDrowerOpen={false}
+      toggleDrower={[Function]}
+    />
+    <WithStyles(Typography)
+      color="inherit"
+      component={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+      variant="h6"
+    >
+      Kagaribi-proto
+    </WithStyles(Typography)>
+    <div
+      style={
+        Object {
+          "marginLeft": "auto",
+          "marginRight": "0",
+        }
+      }
+    >
+      <TopAppBarAccountButton />
+    </div>
+  </WithStyles(Toolbar)>
+</WithStyles(AppBar)>
+`;
+
+exports[`<TopAppBarAccountButton /> should be rendered correctly 1`] = `
+<div>
+  <WithStyles(IconButton)
+    aria-haspopup="true"
+    color="inherit"
+    onClick={[Function]}
+  >
+    <pure(AccountCircleIcon) />
+  </WithStyles(IconButton)>
+  <WithStyles(Menu)
+    anchorEl={null}
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    id="menu-appbar"
+    onClose={[Function]}
+    open={false}
+    transformOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+  >
+    <WithStyles(MenuItem)
+      component={[Function]}
+      onClick={[Function]}
+    >
+      My Page
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      onClick={[Function]}
+    >
+      Sign Out
+    </WithStyles(MenuItem)>
+  </WithStyles(Menu)>
+</div>
+`;
+
+exports[`<TopAppBarDrower /> should be rendered correctly (closed) 1`] = `
+<div>
+  <WithStyles(Drawer)
+    onClose="dummy"
+    open={false}
+  >
+    <div
+      onClick="dummy"
+      onKeyDown="dummy"
+      role="button"
+      tabIndex={0}
+    >
+      <TopAppBarDrowerContents />
+    </div>
+  </WithStyles(Drawer)>
+</div>
+`;
+
+exports[`<TopAppBarDrower /> should be rendered correctly (opened) 1`] = `
+<div>
+  <WithStyles(Drawer)
+    onClose="dummy"
+    open={true}
+  >
+    <div
+      onClick="dummy"
+      onKeyDown="dummy"
+      role="button"
+      tabIndex={0}
+    >
+      <TopAppBarDrowerContents />
+    </div>
+  </WithStyles(Drawer)>
+</div>
+`;
+
+exports[`<TopAppBarDrowerContents /> should be rendered correctly 1`] = `
+<div>
+  <WithStyles(List)>
+    <WithStyles(ListItem)
+      button={true}
+      component={[Function]}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(HomeIcon) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)>
+        Home
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+    <WithStyles(ListItem)
+      button={true}
+      component={[Function]}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(SubjectIcon) />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)>
+        About
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+  </WithStyles(List)>
+</div>
+`;
+
+exports[`<TopAppBarSignInButton /> should be rendered correctly 1`] = `
+<div>
+  <WithStyles(Button)
+    color="inherit"
+    component={[Function]}
+  >
+    SIGN IN
+  </WithStyles(Button)>
+</div>
+`;
