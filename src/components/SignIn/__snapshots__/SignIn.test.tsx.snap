@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignInForm /> should be rendered correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <TextField
+    autoComplete="on"
+    id="email-address"
+    label="Email"
+    onChange={[Function]}
+    placeholder="Email Address"
+    required={false}
+    select={false}
+    type="text"
+    value=""
+    variant="standard"
+  />
+    
+  <TextField
+    autoComplete="on"
+    id="password"
+    label="Password"
+    onChange={[Function]}
+    placeholder="Passwprd"
+    required={false}
+    select={false}
+    type="password"
+    value=""
+    variant="standard"
+  />
+  <WithStyles(Button)
+    disabled={true}
+    type="submit"
+    variant="outlined"
+  >
+    Sign In
+  </WithStyles(Button)>
+</form>
+`;
+
+exports[`<SignInPage /> should be rendered correctly 1`] = `
+<Route>
+  <Component />
+</Route>
+`;

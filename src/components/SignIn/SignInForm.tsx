@@ -24,6 +24,8 @@ class SignInFrom extends React.Component<ISignInFormProps, ISignInFormState> {
     constructor(signInFormProps: ISignInFormProps) {
         super(signInFormProps);
         this.state = { ...INITIAL_STATE };
+
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     public onSubmit = (event: any): void => {
