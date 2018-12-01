@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUpForm /> should be rendered correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <TextField
+    autoComplete="on"
+    id="Full Name"
+    label="Full Name"
+    onChange={[Function]}
+    placeholder="Full Name"
+    required={false}
+    select={false}
+    type="text"
+    value=""
+    variant="standard"
+  />
+    
+  <TextField
+    autoComplete="on"
+    id="email-address"
+    label="Email"
+    onChange={[Function]}
+    placeholder="Email Address"
+    required={false}
+    select={false}
+    type="text"
+    value=""
+    variant="standard"
+  />
+    
+  <TextField
+    autoComplete="on"
+    id="password"
+    label="Password"
+    onChange={[Function]}
+    placeholder="Password"
+    required={false}
+    select={false}
+    type="password"
+    value=""
+    variant="standard"
+  />
+    
+  <TextField
+    autoComplete="on"
+    id="password-two"
+    label="Confirm Password"
+    onChange={[Function]}
+    placeholder="Confirm Password"
+    required={false}
+    select={false}
+    type="password"
+    value=""
+    variant="standard"
+  />
+  <WithStyles(Button)
+    disabled={true}
+    type="submit"
+    variant="outlined"
+  >
+    Sign Up
+  </WithStyles(Button)>
+</form>
+`;
+
+exports[`<SignUpLink /> should be rendered correctly 1`] = `
+<p>
+  アカウントをお持ちでないですか？
+   
+  <a
+    href="/signup"
+    onClick={[Function]}
+  >
+    Sign Up
+  </a>
+</p>
+`;
+
+exports[`<SignUpPage /> should be rendered correctly 1`] = `
+<Route>
+  <Component />
+</Route>
+`;

@@ -27,6 +27,8 @@ class SignUpForm extends React.Component<ISignUpFormProps, ISignUpFormState> {
     constructor(signUpFormProps: ISignUpFormProps) {
         super(signUpFormProps);
         this.state = { ...INITIAL_STATE };
+
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     public onSubmit = (event: any): void => {
