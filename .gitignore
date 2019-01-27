@@ -5,8 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Compiled js
-public/**/*.js
+# Compiled frontend js
+frontend/public/**/*.js
 *.map
 
 # Dependency directories

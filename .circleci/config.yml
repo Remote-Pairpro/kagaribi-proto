@@ -22,31 +22,36 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "frontend/package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run:
           name: Install dependencies
+          working_directory: frontend
           command: yarn install
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "frontend/package.json" }}
 
       - run:
           name: Lint
+          working_directory: frontend
           command: yarn run tslint:run
 
       - run:
           name: Build
+          working_directory: frontend
           command: yarn run build:prod
 
       - run:
           name: Test
+          working_directory: frontend
           command: yarn test
 
       - run:
           name: Deploy master to firebase
+          working_directory: frontend
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
